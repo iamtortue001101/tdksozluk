@@ -6,13 +6,14 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamayı sağlay
 ## İçerik
 
 - [Kurulum](#kurulum)
-- [Örnekler](#ornekler)
+- [Resim Demo](#resimdemo)
+- [APK Demo](#apkdemo)
 
-## Örnekler
-* [Örnekler](https://api.iamtortue.com/sozluk/)
+## Resim Demo
+* [resimdemo](https://api.iamtortue.com/sozluk/)
 
-## APK Örneği
-* [apkornegi](https://drive.google.com/file/d/1KnEdNLn0w0cF2MltFvPtHRI4MVS4afAV/view)
+## APK Demo
+* [apkdemo](https://drive.google.com/file/d/1KnEdNLn0w0cF2MltFvPtHRI4MVS4afAV/view)
 
 ## Kurulum
 
