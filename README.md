@@ -10,11 +10,20 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağ
 - [APK Demo](#apk-demo)
 
 ## Resim Demo
-* [resimdemo](https://api.iamtortue.com/sozluk/)
+* [Resim Demo](https://api.iamtortue.com/sozluk/)
 
 ## APK Demo
-* [apkdemo](https://drive.google.com/file/d/1KnEdNLn0w0cF2MltFvPtHRI4MVS4afAV/view)
+* [APK Demo](https://drive.google.com/file/d/1KnEdNLn0w0cF2MltFvPtHRI4MVS4afAV/view)
 
 ## Kurulum
 
 `yarn install` ya da `npm install`
+
+
+## Güncelleme Notları
+
+
+- İsim sorgulama eklendi.
+- Son sorgulanan sözcük ve isim için geçmiş eklendi.
+- Bazı performans iyileştirmeleri yapıldı.
+- Sürüm `v1.1`'e geçildi.
