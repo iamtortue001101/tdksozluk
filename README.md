@@ -20,9 +20,9 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağ
 `yarn install` ya da `npm install`
 
 
-## Güncelleme Notları v1.1 01.07.2020
+## Güncelleme Notları v1.1
 
-
+* 01.07.2020
 - İsim sorgulama eklendi.
 - Son sorgulanan sözcük ve isim için geçmiş eklendi.
 - Bazı performans iyileştirmeleri yapıldı.
