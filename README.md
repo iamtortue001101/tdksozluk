@@ -20,7 +20,7 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağ
 `yarn install` ya da `npm install`
 
 
-## Güncelleme Notları
+## Güncelleme Notları v1.1 01.07.2020
 
 
 - İsim sorgulama eklendi.
