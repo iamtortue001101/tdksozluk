@@ -26,4 +26,4 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağ
 - İsim sorgulama eklendi.
 - Son sorgulanan sözcük ve isim için geçmiş eklendi.
 - Bazı performans iyileştirmeleri yapıldı.
-- Sürüm `v1.1`'e geçildi.
+- Android 9 ve 10'da yaşanan API Fetch hatası giderildi.
