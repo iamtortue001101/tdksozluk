@@ -6,8 +6,8 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamayı sağlay
 ## İçerik
 
 - [Kurulum](#kurulum)
-- [Resim Demo](#resimdemo)
-- [APK Demo](#apkdemo)
+- [Resim Demo](#resim-demo)
+- [APK Demo](#apk-demo)
 
 ## Resim Demo
 * [resimdemo](https://api.iamtortue.com/sozluk/)
