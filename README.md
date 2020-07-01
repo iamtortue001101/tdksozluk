@@ -1,7 +1,7 @@
 # TDK Sözlük Mobil Uygulama
 
 
-Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamayı sağlayan uygulama.
+Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağlayan uygulama.
 
 ## İçerik
 
