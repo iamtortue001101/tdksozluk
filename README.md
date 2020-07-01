@@ -1,1 +1,1 @@
-"# deneme" 
+"# TDK Sözlük Mobil Uygulama" 
