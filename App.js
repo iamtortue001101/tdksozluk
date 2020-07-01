@@ -3,9 +3,10 @@ import { Provider as PaperProvider, DefaultTheme, DarkTheme } from 'react-native
 import AsyncStorage from '@react-native-community/async-storage';
 import SplashScreen from 'react-native-splash-screen';
 import NetInfo from "@react-native-community/netinfo";
+import Constants from './Src/Common/Constants';
 
-import Home from './Src/Home/Home';
-import Disconnected from './Src/Disconnected/Disconnected';
+import Main from './Src/Main';
+import Disconnected from './Src/Screens/Disconnected/Disconnected';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,13 +19,16 @@ class App extends React.Component {
 
   async componentDidMount() {
     try {
+      Constants.SqlService.query(
+        'CREATE TABLE IF NOT EXISTS history (id INTEGER PRIMARY KEY AUTOINCREMENT, wanted TEXT, process_type TEXT, time TEXT)',
+      );
       const netInfo = await NetInfo.fetch();
       const activeTheme = await AsyncStorage.getItem('theme');
       activeTheme != null ? this.setState({ activeTheme: activeTheme }) : await AsyncStorage.setItem('theme', 'dark')
       this.setState({ isConnected: netInfo.isConnected })
       SplashScreen.hide();
     } catch (error) {
-      Alert.alert("Bir hata oluştu. Hata kodu: #2")
+      Alert.alert("Bir hata oluştu. Hata kodu: #1")
     }
   }
 
@@ -33,7 +37,7 @@ class App extends React.Component {
       await AsyncStorage.setItem('theme', this.state.activeTheme === "dark" ? "light" : "dark")
       this.setState({ activeTheme: this.state.activeTheme === "dark" ? "light" : "dark" })
     } catch (error) {
-      Alert.alert("Bir hata oluştu. Hata kodu: #1")
+      Alert.alert("Bir hata oluştu. Hata kodu: #2")
     }
   }
 
@@ -68,12 +72,15 @@ class App extends React.Component {
         <PaperProvider theme={theme}>
           {this.state.isConnected
             ? <>
-              <Home
+              <Main
+                theme={this.state.activeTheme}
+                ref={ref => this.navigator = ref}
                 screenProps={{
                   reloadApp: async () => await this.reloadApp(),
                   changeBackGround: this.changeBackGround,
                   activeTheme: this.state.activeTheme,
                   reTryConnect: this.reTryConnect,
+                  ...this.state
                 }}
               />
             </>

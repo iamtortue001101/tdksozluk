@@ -16,7 +16,7 @@ class Disconnected extends React.Component {
             const result = await SP.reTryConnect();
             !result ? Alert.alert("Lütfen internet bağlantınızı kontrol edin.") : ""
         } catch (error) {
-            Alert.alert("Bir hata oluştu. Hata kodu: #5")
+            Alert.alert("Bir hata oluştu. Hata kodu: #4")
         }
     }
 

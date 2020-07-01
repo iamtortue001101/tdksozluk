@@ -32,13 +32,5 @@ export default StyleSheet.create({
     themeBtn: {
         width: '50%',
         alignSelf: 'center',
-    },
-    description: {
-        alignSelf: 'center',
-        fontWeight: 'bold',
-        fontSize: 16
-    },
-    descriptionPH: {
-        alignSelf: 'center',
     }
 })

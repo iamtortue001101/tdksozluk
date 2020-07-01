@@ -10,7 +10,14 @@ export default {
                 }).catch((errorMessage, statusCode) => reject(errorMessage, statusCode))
         })
     },
-    sQuery: function (value) {
+    nQuery: function (value) {
+        return new Promise(async (resolve, reject) => {
+            this.get(this.siteUrl + "adlar?ara=" + value)
+                .then(content => resolve(content))
+                .catch(error => reject(error))
+        })
+    },
+    wQuery: function (value) {
         return new Promise(async (resolve, reject) => {
             this.get(this.siteUrl + "yazim?ara=" + value)
                 .then(content => resolve(content))
