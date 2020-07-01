@@ -13,7 +13,7 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağ
 * [Resim Demo](https://api.iamtortue.com/sozluk/)
 
 ## APK Demo
-* [APK Demo](https://drive.google.com/file/d/1KnEdNLn0w0cF2MltFvPtHRI4MVS4afAV/view)
+* [APK Demo](https://drive.google.com/file/d/1803qVIYLRI9Cc1foKl8r5UFw8zugjQNJ/view)
 
 ## Kurulum
 
