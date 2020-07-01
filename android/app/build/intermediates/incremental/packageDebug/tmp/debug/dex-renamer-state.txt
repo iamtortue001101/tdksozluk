@@ -1,4 +1,0 @@
-#Wed Jul 01 11:22:45 EET 2020
-base.0=C\:\\Users\\albya\\Desktop\\sozluk\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
