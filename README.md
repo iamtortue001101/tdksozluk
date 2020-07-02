@@ -27,3 +27,10 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağ
 - Son sorgulanan sözcük ve isim için geçmiş eklendi.
 - Bazı performans iyileştirmeleri yapıldı.
 - Android 9 ve 10'da yaşanan API Fetch hatası giderildi.
+
+## Güncelleme Notları v1.1.1
+
+* 03.07.2020
+- Sözcüklerin anlamları eklendi.
+- Inputlar güncellendi.
+- Klavye'de bulunan enter butonu artık arama yapabiliyor.

@@ -22,6 +22,7 @@ export default StyleSheet.create({
         alignSelf: 'center'
     },
     description: {
+        width: '60%',
         alignSelf: 'center',
         fontWeight: 'bold',
         fontSize: 16

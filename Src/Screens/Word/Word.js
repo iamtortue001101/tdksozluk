@@ -2,10 +2,9 @@ import React from 'react';
 import {
     SafeAreaView,
     View,
-    Alert,
     ToastAndroid,
 } from 'react-native';
-import { Text, TextInput, Button } from 'react-native-paper';
+import { Text, TextInput, Button, Searchbar } from 'react-native-paper';
 import NetInfo from "@react-native-community/netinfo";
 import Icon from 'react-native-vector-icons/dist/Feather';
 import Constants from '../../Common/Constants';
@@ -18,6 +17,7 @@ class Word extends React.Component {
             query: '',
             result: [],
             showLoader: false,
+            meaning: {status: null}
         }
     }
 
@@ -36,7 +36,7 @@ class Word extends React.Component {
             const SP = this.props.screenProps;
             netInfo.isConnected
                 ? value.length != 0 
-                    ? (this.setState({ result: await Constants.wQuery(value), showLoader: false }), 
+                    ? (this.setState({ result: await Constants.wQuery(value), meaning: await Constants.wMQuery(value), showLoader: false }), 
                     Constants.SqlService.insert(
                         'history',
                         [
@@ -62,20 +62,19 @@ class Word extends React.Component {
             <SafeAreaView style={Style.container}>
                     <Text style={Style.caption}>MIUI TÜRKİYE - TORTUE</Text>
                     <View style={Style.formGroup}>
-                        <TextInput
-                            label='Sözcüğü yazın...'
+                    <Searchbar
+                            placeholder='Sözcüğü yazın...'
                             value={this.state.query}
                             onChangeText={query => this.setState({ query })}
-                            mode="outlined"
                             selectionColor={SP.activeTheme == "dark" ? "white" : "black"}
-                            error={true}
+                            onSubmitEditing={() => this.wQuery(this.state.query)}
                         />
                         <Button icon="database-search" mode="outlined" loading={this.state.showLoader} onPress={() => this.wQuery(this.state.query)} color={SP.activeTheme == "dark" ? "white" : "black"} style={[Style.qButton, { backgroundColor: SP.activeTheme == "dark" ? "black" : "white", color: SP.activeTheme == "dark" ? "black" : "white" }]}><Text style={{ color: SP.activeTheme == "dark" ? "white" : "black" }}>Sorgula</Text></Button>
                     </View>       
                 <View>
                 {Array.isArray(this.state.result)
                         ? this.state.result.map((item, i) => {
-                        return (<Text key={i} style={Style.description}>"{item.sozu}" doğru bir kullanımdır. <Icon name="check" size={20} color={SP.activeTheme == "dark" ? "white" : "black"} /></Text>)
+                        return (<Text key={i} style={Style.description}>"{item.sozu}" doğru bir kullanımdır. <Icon name="check" size={20} color={SP.activeTheme == "dark" ? "white" : "black"} />{"\n"}{"\n"} <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'red' }}>Anlam</Text> {"\n"}{"\n"} {this.state.meaning.status ? this.state.meaning.result : "Anlam bulunamadı."}</Text>)
                         })
                         : <Text style={Style.description}>Sözcük yanlış ya da bulunamadı. <Icon name="x" size={20} color={SP.activeTheme == "dark" ? "white" : "black"} /></Text>}
                 </View>

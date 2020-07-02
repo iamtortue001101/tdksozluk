@@ -2,10 +2,9 @@ import React from 'react';
 import {
     SafeAreaView,
     View,
-    Alert,
     ToastAndroid,
 } from 'react-native';
-import { Text, TextInput, Button } from 'react-native-paper';
+import { Text, TextInput, Button, Searchbar } from 'react-native-paper';
 import NetInfo from "@react-native-community/netinfo";
 import Icon from 'react-native-vector-icons/dist/Feather';
 import Constants from '../../Common/Constants';
@@ -62,13 +61,12 @@ class Name extends React.Component {
             <SafeAreaView style={Style.container}>
                     <Text style={Style.caption}>MIUI TÜRKİYE - TORTUE</Text>
                     <View style={Style.formGroup}>
-                        <TextInput
-                            label='İsmi yazın...'
+                        <Searchbar
+                            placeholder='İsmi yazın...'
                             value={this.state.query}
                             onChangeText={query => this.setState({ query })}
-                            mode="outlined"
                             selectionColor={SP.activeTheme == "dark" ? "white" : "black"}
-                            error={true}
+                            onSubmitEditing={() => this.nQuery(this.state.query)}
                         />
                         <Button icon="database-search" mode="outlined" loading={this.state.showLoader} onPress={() => this.nQuery(this.state.query)} color={SP.activeTheme == "dark" ? "white" : "black"} style={[Style.qButton, { backgroundColor: SP.activeTheme == "dark" ? "black" : "white", color: SP.activeTheme == "dark" ? "black" : "white" }]}><Text style={{ color: SP.activeTheme == "dark" ? "white" : "black" }}>Sorgula</Text></Button>
                     </View>

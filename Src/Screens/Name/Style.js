@@ -21,9 +21,6 @@ export default StyleSheet.create({
         marginTop: '5%',
         alignSelf: 'center'
     },
-    formThemeBtn: {
-        flex: .1,
-    },
     description: {
         width: '50%',
         alignSelf: 'center',
