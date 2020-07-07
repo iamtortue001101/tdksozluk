@@ -34,9 +34,13 @@ class Word extends React.Component {
             this.setState({ showLoader: true })
             const netInfo = await NetInfo.fetch();
             const SP = this.props.screenProps;
+            const mValue = {
+                value: value,
+                secret: "B9w6NIp)aOYLDBm}=|'CF5`j^XK9-l2%^&w'Leiq[%@Tphi'M(`Zf"
+            }
             netInfo.isConnected
                 ? value.length != 0 
-                    ? (this.setState({ result: await Constants.wQuery(value), meaning: await Constants.wMQuery(value), showLoader: false }), 
+                    ? (this.setState({ result: await Constants.wQuery(value), meaning: await Constants.wMQuery(mValue), showLoader: false }), 
                     Constants.SqlService.insert(
                         'history',
                         [

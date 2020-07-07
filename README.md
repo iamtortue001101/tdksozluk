@@ -13,7 +13,7 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağ
 * [Resim Demo](https://api.iamtortue.com/sozluk/)
 
 ## APK Demo
-* [APK Demo](https://drive.google.com/file/d/1Gvb56rNBLjxWD74LPKEjlvjIqKHjhgyH/view)
+* [APK Demo](https://drive.google.com/file/d/10Cf3SN_kW_giPavYxGK_RDTRDUkqDJri/view?usp=sharing)
 
 ## Kurulum
 
@@ -34,3 +34,9 @@ Doğru sanılan ancak yanlış olarak bilinen sözcükleri doğrulamanızı sağ
 - Sözcüklerin anlamları eklendi.
 - Inputlar güncellendi.
 - Klavye'de bulunan enter butonu artık arama yapabiliyor.
+
+## Güncelleme Notları v1.1.2
+
+* 07.07.2020
+- Sözcük anlamları API adresine doğrudan erişim ve uygulama dışı farklı yöntemlerle bir nebze de olsa erişim engellendi.
+- V1, V1.1 ve V1.1.1 sürümlerinde artık sözcük anlamları yok. V1.1.2 sürümünü indirmeniz gerekiyor.
